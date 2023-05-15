@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser redenrizada-->
+<html lang="pr-br">
+
+<head>
+   <title>DesafioCarlos</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="exercicos, prática">
+   <meta name="description" content="informatica, tecnologia">
+   <meta name="author" content="carlos">
+   <link href="./Css/estilo.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+   <div id="Principal">
+      <header>
+         <h1>
+            Minha Pagina Legal
+         </h1>
+      </header>
+
+
+      <section>
+         <div class="container">
+
+            <div class="testes-input">
+               <p class="teste-paragrafo">Testes com Input</p>
+               <label>Multiplicar
+                  <input id="num1Mult" type="number" autofocus />
+                  *
+                  <input id="num2Mult" type="number" />
+                  <button class="ssds" id="btnMult" onclick="Multplicar()">Ver Resultado</button>
+               </label>
+
+               <br>
+
+               <label class="somar">Somar
+                  <input id="num1Som" type="number" />
+                  +
+                  <input id="num2Som" type="number" />
+                  <button class="ssds" id="btnSomar" onclick="Somar()">Ver Resultado</button>
+               </label>
+
+               <br>
+
+               <label><span>Subtrair</span>
+                  <input id="num1Sub" type="number" />
+                  -
+                  <input id="num2Sub" type="number" />
+                  <button id="btnSubtrair" onclick="Subtrair()">Ver Resultado</button>
+               </label>
+
+            </div>
+
+
+
+            <div class="input-nome">
+               <p class="teste-paragrafo">Input Nome e Cidade</p>
+               <label>Seu Nome</label>
+               <input type="text" id="NomeDigitado" placeholder="informe seu Nome" />
+               <button id="btnNome" onclick="NomeDigitado()">Click here</button>
+               <p>Resultado Nome:
+                  <span id="resultaNome"></span>
+               </p>
+
+
+
+
+               <label>Sua Cidade</label>
+               <input type="text" id="input-get" placeholder="informe sua Cidade" />
+               <button onclick="SuaCidade()" id="btn-get">Click here</button><br>
+               <p class="ptn">Resultado Cidade:
+                  <span class="ptn" id="resultado"></span>
+               </p>
+
+
+            </div>
+
+
+
+            <div class="input-sistemas">
+               <p class="teste-paragrafo">Sistemas de Habilitação</p>
+               <label>Idade</label>
+               <input type="number" id="idade" placeholder="Idade" />
+               <br>
+
+               <label>Gosta de correr igual louco?</label>
+               <input type="text" id="pergunta" placeholder=" S ou N" />
+               <button onclick="Dirigir()"> Informar</button><br>
+               <p class="ptn">Você pode dirigir:
+                  <span class="ptn-buton" id="ResultadoDirigir"></span>
+               </p>
+            </div>
+
+
+
+         </div>
+      </section>
+
+
+      <section class="section-footer">
+         <div class="footer">
+
+            <label id="form" for="valor" class="label-footer">Quantas repete
+            </label>
+            <input type="number" id="valor" onchange="MeuRepetidor()" />
+
+            <p id="digito"></p>
+
+
+         </div>
+
+         <div class="footer-li">
+            <div>
+               <input type="text" id="nomeTask" />
+               <button class="btn-api" onclick="AddTasks()">Adicionar tarefa</button>
+            </div>
+            <div><span class="api-p" id="todoTask"></span></div>
+         </div>
+
+         <div class="footer-li">
+
+            <div><button class="btn-api" onclick="ApiRoupas()">Roupas</button></div>
+            <p class="api-li"> Resultado:</p>
+            <div><span class="api-p" id="resultadonomes-1"></span></div>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiSacolao()">Sacolao </button>
+            <p class="Api-p"> Resultado:<span id="resultadonomes" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiCompras()">Compras </button>
+            <p class="Api-p"> Resultado:<span id="resultado-1" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="Apifornecedor()">Fornecedor</button>
+            <p class="Api-p"> Resultado:<span id="resultado-2" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiClientes()">Clientes </button>
+            <p class="Api-p"> Resultado:<span id="resultado-3" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiCarros()">Carros</button>
+            <p class="Api-p"> Resultado:<span id="resultado-4" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiTimes()">Times </button>
+            <p class="Api-p"> Resultado:<span id="resultado-5" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiEmpregos()">Empregos </button>
+            <p class="Api-p"> Resultado:<span id="resultado-6" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiImoveis()">Imoveis</button>
+            <p class="Api-p"> Resultado:<span id="resultado-7" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiSorteio()">Sorteio </button>
+            <p class="Api-p"> Resultado:<span id="resultado-8" class="Api-p"></span></p>
+         </div>
+
+         <div class="footer">
+            <button class="btn-api" onclick="ApiLinguagem()">Linguagem </button>
+            <p class="Api-p"> Resultado:<span id="resultado-9" class="Api-p"></span></p>
+         </div>
+
+      </section>
+
+   </div>
+
+   <script>
+
+      var tarefas = [];
+      let carName = "teste";
+
+      function ApiRoupas() {
+
+         fetch('http://localhost:3000/roupas')
+            .then(response => response.json())
+            .then(roupas => {
+
+               var lista = "<ul>"
+
+               for (let index = 0; index < roupas.length; index++) {
+
+                  lista += "<li>" + roupas[index] + "</li>"
+
+               }
+               lista += "</ul>"
+
+               document.getElementById("resultadonomes-1").innerHTML = lista;
+            })
+      }
+
+      function ApiSacolao() {
+
+         fetch('http://localhost:3000/sacolao')
+            .then(response => response.json())
+            .then(minhaFruta => {
+               document.getElementById("resultadonomes").innerHTML = minhaFruta;
+            })
+      }
+
+
+      function ApiCompras() {
+
+         fetch('http://localhost:3000/compras')
+            .then(response => response.json())
+            .then(compras => {
+               document.getElementById("resultado-1").innerHTML = compras;
+            })
+      }
+
+
+      function Apifornecedor() {
+
+         fetch('http://localhost:3000/fornecedor')
+            .then(response => response.json())
+            .then(fornecedor => {
+               document.getElementById("resultado-2").innerHTML = fornecedor;
+            })
+      }
+
+
+      function ApiClientes() {
+
+         fetch('http://localhost:3000/clientes')
+            .then(response => response.json())
+            .then(clientes => {
+               document.getElementById("resultado-3").innerHTML = clientes;
+            })
+      }
+
+
+      function ApiCarros() {
+
+         fetch('http://localhost:3000/Carros')
+            .then(response => response.json())
+            .then(carros => {
+               document.getElementById("resultado-4").innerHTML = carros;
+            })
+      }
+
+
+      function ApiTimes() {
+
+         fetch('http://localhost:3000/times')
+            .then(response => response.json())
+            .then(times => {
+               document.getElementById("resultado-5").innerHTML = times;
+            })
+      }
+
+
+      function ApiEmpregos() {
+
+         fetch('http://localhost:3000/empregos')
+            .then(response => response.json())
+            .then(emprego => {
+               document.getElementById("resultado-6").innerHTML = emprego;
+            })
+      }
+
+
+      function ApiImoveis() {
+
+         fetch('http://localhost:3000/imoveis')
+            .then(response => response.json())
+            .then(imoveis => {
+               document.getElementById("resultado-7").innerHTML = imoveis;
+            })
+      }
+
+
+      function ApiSorteio() {
+
+         fetch('http://localhost:3000/sorteio')
+            .then(response => response.json())
+            .then(sorteio => {
+               document.getElementById("resultado-8").innerHTML = sorteio;
+            })
+      }
+
+      function ApiLinguagem() {
+
+         fetch('http://localhost:3000/linguagem')
+            .then(response => response.json())
+            .then(linguagem => {
+               document.getElementById("resultado-9").innerHTML = linguagem;
+            })
+      }
+
+      exitcls
+      function MeuRepetidor() {
+         captar = parseInt(document.getElementById("valor").value);
+
+         var resposta = "";
+
+         for (let i = 0; i < captar; i++) {
+
+            resposta += "#";
+         }
+
+         document.getElementById("digito").innerText = resposta;
+
+      }
+
+      function Multplicar() {
+         var num1 = document.getElementById("num1Mult").value;
+         var num2 = document.getElementById("num2Mult").value;
+         var resultado = parseInt(num1) * parseInt(num2);
+         alert(resultado);
+
+      }
+
+      function Somar() {
+         var num1 = document.getElementById("num1Som").value;
+         var num2 = document.getElementById("num2Som").value;
+         var resultado = parseInt(num1) + parseInt(num2);
+         alert(resultado);
+
+      }
+
+      function Subtrair() {
+         var num1 = document.getElementById("num1Sub").value;
+         var num2 = document.getElementById("num2Sub").value;
+         var resultado = parseInt(num1) - parseInt(num2);
+         alert(resultado);
+
+      }
+
+      function NomeDigitado() {
+         var nomeinformado = document.getElementById("NomeDigitado").value;
+         document.getElementById("resultaNome").innerHTML = nomeinformado;
+      }
+
+
+
+      function SuaCidade() {
+         var btnGet = document.getElementById("input-get").value;
+         document.getElementById("resultado").innerHTML = btnGet;
+
+      }
+
+      function Dirigir() {
+         var idade = parseInt(document.getElementById("idade").value);
+         var informacao = document.getElementById("pergunta").value;
+
+         var resultado = "";
+
+         if (idade >= 18 && informacao.toLowerCase() == "n") {
+            resultado = "Pode dirigir"
+         }
+         else if (idade >= 18 && informacao.toLowerCase() == "s") {
+            resultado = "Nunca irá dirigir seu canalha!"
+         }
+         else if (idade <= 18 && informacao.toLowerCase() == "s") {
+            resultado = "Mesmo que pudesse não deixaria vc tirar a carta!"
+         }
+         else if (idade < 18 && informacao.toLowerCase() == "n") {
+            resultado = "É só esperar que um dia chega"
+         }
+
+         document.getElementById("ResultadoDirigir").textContent = resultado;
+
+      }
+
+      var captar = "";
+      function repeteQuantidade() {
+         captar = parseInt(document.getElementById("valor").value);
+         parseInt(document.getElementById("digito").innerHTML = captar);
+
+         document.getElementById("digito").innerText = "#";
+      }
+
+
+
+
+      async function  AddTasks() {
+
+
+
+
+         var nomeTarefa = document.getElementById("nomeTask").value;
+
+
+         let data = {
+            "tarefa": nomeTarefa
+         };
+
+         const response = await fetch("http://localhost:3000/tarefas", {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+         });
+
+         const result = response.json();
+
+
+         tarefas.push(nomeTarefa);
+         var lista = "<ul>"
+
+         for (let index = 0; index < tarefas.length; index++) {
+
+            lista += "<li>" + tarefas[index] + "</li>"
+
+         }
+
+         lista += "</ul>"
+         document.getElementById("todoTask").innerHTML = lista;
+      }
+
+
+
+   </script>
+
+
+
+</body>
+
+</html>
